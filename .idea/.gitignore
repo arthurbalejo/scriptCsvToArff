@@ -1,4 +1,5 @@
 # Default ignored files
+/venv
 .venv
 /shelf/
 /workspace.xml
