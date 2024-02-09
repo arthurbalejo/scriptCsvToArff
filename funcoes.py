@@ -1,3 +1,8 @@
+import pandas as pd
+import os
+import arff
+from io import StringIO
+
 def arff_to_arff(dados, cabecalho, destino):
     # Abra o arquivo de origem dados em modo de leitura
     with open(dados, 'r') as arquivo_dados:

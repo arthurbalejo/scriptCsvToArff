@@ -2,7 +2,7 @@ import pandas as pd
 import os
 import arff
 from io import StringIO
-
+from funcoes import arff_to_arff, df_to_arff, contar_diretorios, listar_diretorios 
 
 
 # Substitua 'caminho/do/seu/diretorio' pelo caminho real do diretório que você deseja verificar
@@ -27,7 +27,9 @@ for nome in nomes_diretorios:
     for nomesubdir in nomes_subdir:
         print(f"-" * 30)
         print(f"{nome}: {nomesubdir}")
-    try:
+    #precisei apagar os seguintes cursos: 
+    #CAL 724, 725, 726 // CCSH 3004 // CCS 211
+    #try: 
         diretorio_analise = '/home/arthur/Documents/CursosGraduacaoCopia/' + nome + '/' + nomesubdir + '/2023-2/dadosSQL/'
         arquivo_treina = diretorio_analise + '/treina.csv'
         arquivo_teste = diretorio_analise + '/teste.csv'
@@ -74,5 +76,5 @@ for nome in nomes_diretorios:
             r'/home/arthur/Documents/CursosGraduacaoCopia/' + nome + '/' + nomesubdir + '/2023-2/mineracao/matriculados.arff')
 
 
-    except:
-        print(f'Curso {nomes_subdir} não tem a pasta 2023-2')
+    #except:
+    #    print(f'Curso {nomes_subdir} não tem a pasta 2023-2')
